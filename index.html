@@ -189,7 +189,7 @@
 <blockquote>
 <p>facebook就是用的这种，降低并发时获取到脏数据的概率</p>
 </blockquote>
-<h6 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h6><h5 id="缓存架构设计"><a href="#缓存架构设计" class="headerlink" title="缓存架构设计"></a>缓存架构设计</h5><h5 id="缓存和DB一致性的解决方案"><a href="#缓存和DB一致性的解决方案" class="headerlink" title="缓存和DB一致性的解决方案"></a>缓存和DB一致性的解决方案</h5><h6 id="1-设置缓存的TTL-Time-to-live"><a href="#1-设置缓存的TTL-Time-to-live" class="headerlink" title="1.设置缓存的TTL(Time to live)"></a>1.设置缓存的TTL(Time to live)</h6><p>​    对于那些不重要的数据，读取数据的时候设置一个超时时间，等到超时之后，再从数据库读取下次数据。</p>
+<h6 id="2-缓存架构设计"><a href="#2-缓存架构设计" class="headerlink" title="2.缓存架构设计"></a>2.缓存架构设计</h6><h5 id="缓存和DB一致性的解决方案"><a href="#缓存和DB一致性的解决方案" class="headerlink" title="缓存和DB一致性的解决方案"></a>缓存和DB一致性的解决方案</h5><h6 id="1-设置缓存的TTL-Time-to-live"><a href="#1-设置缓存的TTL-Time-to-live" class="headerlink" title="1.设置缓存的TTL(Time to live)"></a>1.设置缓存的TTL(Time to live)</h6><p>​    对于那些不重要的数据，读取数据的时候设置一个超时时间，等到超时之后，再从数据库读取下次数据。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/hmu9lbityqhvHsCGvphpxA">https://mp.weixin.qq.com/s/hmu9lbityqhvHsCGvphpxA</a>   微信<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/striveb/article/details/95110502">https://blog.csdn.net/striveb/article/details/95110502</a>        csdn</p>
 </blockquote>
