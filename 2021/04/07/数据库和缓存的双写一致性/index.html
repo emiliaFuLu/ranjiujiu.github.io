@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://ranjiujiu.github.io">
-  <title>ceshi | FuLu的博客</title>
+  <title>数据库和缓存的双写一致性 | FuLu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="关于数据库和缓存的双写一致性关于一致性？​    数据库和缓存的一致性主要是在高并发的情况下，缓存导致的读到旧数据的情况。 产生的原因主要是下面的两种情况，会产生缓存和DB的一致性问题： ​    1. 并发的场景下，导致读取老的 DB 数据，更新到缓存中。 ​    2. 缓存和 DB 的操作，不在一个事务中，可能只有一个操作成功，而另一个操作失败，导致不一致。 x1缓存和DB的一致性问题，我们">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ceshi">
+<meta property="og:title" content="数据库和缓存的双写一致性">
 <meta property="og:url" content="http://ranjiujiu.github.io/2021/04/07/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E7%BC%93%E5%AD%98%E7%9A%84%E5%8F%8C%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7/index.html">
 <meta property="og:site_name" content="FuLu的博客">
 <meta property="og:description" content="关于数据库和缓存的双写一致性关于一致性？​    数据库和缓存的一致性主要是在高并发的情况下，缓存导致的读到旧数据的情况。 产生的原因主要是下面的两种情况，会产生缓存和DB的一致性问题： ​    1. 并发的场景下，导致读取老的 DB 数据，更新到缓存中。 ​    2. 缓存和 DB 的操作，不在一个事务中，可能只有一个操作成功，而另一个操作失败，导致不一致。 x1缓存和DB的一致性问题，我们">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-07T02:49:12.000Z">
-<meta property="article:modified_time" content="2021-04-07T06:35:23.708Z">
+<meta property="article:modified_time" content="2021-04-07T06:45:18.381Z">
 <meta property="article:author" content="Lu Fu">
-<meta property="article:tag" content="个人网站">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="测试">
+<meta property="article:tag" content="读写一致性">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="FuLu的博客" type="application/atom+xml">
@@ -164,7 +162,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ceshi
+      数据库和缓存的双写一致性
     </h1>
   
 
@@ -232,32 +230,13 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人网站</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">读写一致性</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -449,15 +428,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
+                <a href="javascript:void(0)" class="js-tag color1">读写一致性</a>
               </li>
             
             <div class="clearfix"></div>
